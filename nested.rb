@@ -1,4 +1,4 @@
-
+require 'pry'
 def hopper
 	programmer_hash = 
  		{
@@ -15,6 +15,8 @@ def hopper
         :languages => ["C"]
       }
     }
+    return  :known_for => "COBOL",
+        :languages => ["COBOL", "FORTRAN"]
 
 end
 
@@ -37,6 +39,7 @@ def alan_kay_is_known_for
       }
     }
 
+return "Object Orientation"
 end
 
 def dennis_ritchies_language
@@ -56,6 +59,7 @@ def dennis_ritchies_language
       }
     }
 
+return "C"
 end
 
 def adding_matz
@@ -81,6 +85,14 @@ def adding_matz
         :languages => ["C"]
       }
     }
+    #binding.pry
+    programmer_hash[:yukihiro_matsumoto] = {}
+    programmer_hash[:yukihiro_matsumoto][:known_for] = "Ruby"
+    programmer_hash[:yukihiro_matsumoto][:languages] = ["LISP", "C"]
+    
+    #=> {:known_for => "Ruby", :languages => ["LISP", "C"]}}]
+    
+    return programmer_hash
 
 end
 
